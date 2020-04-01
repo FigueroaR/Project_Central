@@ -1,4 +1,4 @@
-class Contract < ApplicationRecord
+class Contractor < ApplicationRecord
     has_many :contracts
 
     validates :firstName, presence: :true
