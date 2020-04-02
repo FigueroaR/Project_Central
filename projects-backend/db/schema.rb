@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_13_155316) do
+ActiveRecord::Schema.define(version: 2020_02_05_100244) do
 
   create_table "contractors", force: :cascade do |t|
     t.string "firstName"
@@ -35,14 +35,14 @@ ActiveRecord::Schema.define(version: 2020_02_13_155316) do
     t.string "projectType"
     t.string "projectInformation"
     t.integer "projectStaff"
-    t.boolean "projectCompleted"
+    t.boolean "projectCompleted", default: false
     t.integer "monthsEstimated"
     t.integer "monthsCurrent"
     t.integer "monthsOverDue"
     t.integer "contractor_id"
+    t.string "contractor_lastName"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "contractor_lastName"
   end
 
 end

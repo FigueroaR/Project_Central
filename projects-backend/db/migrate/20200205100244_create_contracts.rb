@@ -11,11 +11,12 @@ class CreateContracts < ActiveRecord::Migration[6.0]
       t.string :projectType
       t.string :projectInformation
       t.integer :projectStaff
-      t.boolean :projectCompleted
+      t.boolean :projectCompleted, :default => false
       t.integer :monthsEstimated
       t.integer :monthsCurrent
       t.integer :monthsOverDue
       t.integer :contractor_id
+      t.string :contractor_lastName
       t.timestamps
     end
   end
